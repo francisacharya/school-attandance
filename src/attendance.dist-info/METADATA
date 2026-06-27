@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Briefcase-Version: 0.4.1
+Name: attendance
+Formal-Name: Attendance
+App-ID: com.attendance.attendance
+Version: 0.1.0
+Download-URL: 
+Author: Francis Acharya
+Author-email: francis@example.com
+Summary: A port of the attendance web features to mobile platforms.

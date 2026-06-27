@@ -1,0 +1,369 @@
+Date/Time:       2026-04-05 20:42:50 
+Command line:    /Users/francisacharya/Desktop/attendance/.venv/bin/briefcase create ios
+
+OS Release:      Darwin 23.0.0
+OS Version:      Darwin Kernel Version 23.0.0: Fri Sep 15 14:41:34 PDT 2023; root:xnu-10002.1.13~1/RELEASE_ARM64_T8103
+Architecture:    arm64
+Platform:        macOS-14.0-arm64-arm-64bit-Mach-O
+
+Python exe:      /Users/francisacharya/Desktop/attendance/.venv/bin/python3.14
+Python version:  3.14.3 (v3.14.3:323c59a5e34, Feb  3 2026, 11:41:37) [Clang 16.0.0 (clang-1600.0.26.6)]
+Virtual env:     True
+Conda env:       False
+
+Briefcase:       0.4.1
+Target platform: iOS
+Target format:   Xcode
+
+Environment Variables:
+	ANTIGRAVITY_CLI_ALIAS=agy
+	BUNDLED_DEBUGPY_PATH=/Users/francisacharya/.antigravity/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/libs/debugpy
+	COLORTERM=truecolor
+	COMMAND_MODE=unix2003
+	GIT_ASKPASS=********************
+	HOME=/Users/francisacharya
+	HOMEBREW_CELLAR=/opt/homebrew/Cellar
+	HOMEBREW_PREFIX=/opt/homebrew
+	HOMEBREW_REPOSITORY=/opt/homebrew
+	INFOPATH=/opt/homebrew/share/info:/opt/homebrew/share/info:
+	LANG=en_US.UTF-8
+	LOGNAME=francisacharya
+	MANPATH=/Users/francisacharya/.nvm/versions/node/v10.19.0/share/man:/opt/homebrew/share/man:/usr/share/man:/usr/local/share/man:/Users/francisacharya/.nvm/versions/node/v10.19.0/share/man:/opt/homebrew/share/man::
+	MallocNanoZone=0
+	NVM_BIN=/Users/francisacharya/.nvm/versions/node/v10.19.0/bin
+	NVM_CD_FLAGS=-q
+	NVM_DIR=/Users/francisacharya/.nvm
+	NVM_INC=/Users/francisacharya/.nvm/versions/node/v10.19.0/include/node
+	OLDPWD=/Users/francisacharya/Desktop/attendance
+	PATH=/Users/francisacharya/Desktop/attendance/.venv/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.nvm/versions/node/v10.19.0/bin:/opt/homebrew/opt/php@7.4/sbin:/opt/homebrew/opt/php@7.4/bin:/opt/homebrew/opt/openssl@3/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Users/francisacharya/.nvm/versions/node/v10.19.0/bin:/opt/homebrew/opt/php@7.4/sbin:/opt/homebrew/opt/php@7.4/bin:/opt/homebrew/opt/openssl@3/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/francisacharya/development/flutter/bin:/Users/francisacharya/.antigravity/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts:/bin:/Users/francisacharya/development/flutter/bin
+	PS1=(.venv) %n@%m %1~ %# 
+	PWD=/Users/francisacharya/Desktop/attendance
+	PYDEVD_DISABLE_FILE_VALIDATION=1
+	PYTHONSTARTUP=/Users/francisacharya/Library/Application Support/Antigravity/User/workspaceStorage/704c1c470699449ad0c4c188addb6f07/ms-python.python/pythonrc.py
+	PYTHON_BASIC_REPL=1
+	SHELL=/bin/zsh
+	SHLVL=1
+	SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.Qx0URu8U5E/Listeners
+	TERM=xterm-256color
+	TERM_PROGRAM=vscode
+	TERM_PROGRAM_VERSION=1.107.0
+	TMPDIR=/var/folders/7y/kq9l7qk92hngdshm_mxpd2vh0000gn/T/
+	USER=francisacharya
+	USER_ZDOTDIR=/Users/francisacharya
+	VIRTUAL_ENV=/Users/francisacharya/Desktop/attendance/.venv
+	VIRTUAL_ENV_PROMPT=.venv
+	VSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/Users/francisacharya/.antigravity/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/.noConfigDebugAdapterEndpoints/endpoint-46bcb14b33bcab86.txt
+	VSCODE_GIT_ASKPASS_EXTRA_ARGS=********************
+	VSCODE_GIT_ASKPASS_MAIN=********************
+	VSCODE_GIT_ASKPASS_NODE=********************
+	VSCODE_GIT_IPC_HANDLE=/var/folders/7y/kq9l7qk92hngdshm_mxpd2vh0000gn/T/vscode-git-416d354d5b.sock
+	VSCODE_INJECTION=1
+	VSCODE_PROFILE_INITIALIZED=1
+	VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+	XPC_FLAGS=0x0
+	XPC_SERVICE_NAME=0
+	ZDOTDIR=/Users/francisacharya
+	_=/Users/francisacharya/Desktop/attendance/.venv/bin/briefcase
+	__CFBundleIdentifier=com.google.antigravity
+	__CF_USER_TEXT_ENCODING=0x1F5:0:15
+
+pyproject.toml:
+[tool.briefcase]
+project_name = "Attendance"
+bundle = "com.attendance"
+version = "0.1.0"
+display_name = "Attendance"
+description = "Campus Management & Attendance Portal"
+keywords = ["attendance", "education", "management"]
+author = "Francis Acharya"
+author_email = "francis@example.com"
+
+[tool.briefcase.app.attendance]
+formal_name = "Attendance"
+description = "A port of the attendance web features to mobile platforms."
+license.text = "Other"
+sources = ["src/attendance"]
+requires = [
+    "toga>=0.5.3",
+    "httpx",
+    "qrcode[pil]",
+    "pyzbar",
+    "Pillow",
+    "nepali-datetime"
+]
+
+[tool.briefcase.app.attendance.macOS]
+requires = [
+    "toga-cocoa>=0.5.3",
+]
+
+[tool.briefcase.app.attendance.linux]
+requires = [
+    "toga-gtk>=0.5.3",
+]
+
+[tool.briefcase.app.attendance.windows]
+requires = [
+    "toga-winforms>=0.5.3",
+]
+
+[tool.briefcase.app.attendance.android]
+requires = [
+    "toga-android>=0.5.3",
+]
+
+[tool.briefcase.app.attendance.android.permissions]
+camera = "Access to scan QR codes"
+internet = "Access to the backend server"
+
+[tool.briefcase.app.attendance.iOS]
+requires = [
+    "toga-iOS>=0.5.3",
+]
+
+[tool.briefcase.app.attendance.iOS.permissions]
+camera = "Access to scan QR codes"
+
+Briefcase Log:
+[20:42:50]                                                                                                                                                         subprocess.py:839
+           >>> Running Command:                                                                                                                                    subprocess.py:839
+           >>>     xcode-select -p                                                                                                                                 subprocess.py:839
+           >>> Working Directory:                                                                                                                                  subprocess.py:839
+           >>>     /Users/francisacharya/Desktop/attendance                                                                                                        subprocess.py:839
+           >>> Command Output:                                                                                                                                     subprocess.py:839
+           >>>     /Library/Developer/CommandLineTools                                                                                                             subprocess.py:839
+           >>> Return code: 0                                                                                                                                      subprocess.py:839
+                                                                                                                                                                   subprocess.py:839
+                                                                                                                                                                   subprocess.py:839
+           >>> Running Command:                                                                                                                                    subprocess.py:839
+           >>>     xcodebuild -version                                                                                                                             subprocess.py:839
+           >>> Working Directory:                                                                                                                                  subprocess.py:839
+           >>>     /Users/francisacharya/Desktop/attendance                                                                                                        subprocess.py:839
+           >>> Command Output:                                                                                                                                     subprocess.py:839
+           >>>     xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer directory '/Library/Developer/CommandLineTools' is a command line   subprocess.py:839
+           tools instance                                                                                                                                                           
+           >>> Return code: 1                                                                                                                                      subprocess.py:839
+                                                                                                                                                                   subprocess.py:839
+                                                                                                                                                                      __main__.py:42
+           You have the Xcode command line tools installed; however, Briefcase requires                                                                               __main__.py:43
+           a full Xcode install. Xcode can be downloaded from the macOS App Store at                                                                                  __main__.py:43
+           <https://apps.apple.com/au/app/xcode/id497799835?mt=12>.                                                                                                   __main__.py:43
+                                                                                                                                                                      __main__.py:43
+           Or, to use a version of Xcode installed in a non-default location:                                                                                         __main__.py:43
+                                                                                                                                                                      __main__.py:43
+               $ sudo xcode-select --switch /path/to/Xcode.app                                                                                                        __main__.py:43
+                                                                                                                                                                      __main__.py:43
+           and then re-run Briefcase.                                                                                                                                 __main__.py:43
+           Saving log... started                                                                                                                                      console.py:443
+
+Main thread traceback:
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/integrations/xcode.py:108 in ensure_xcode_is_installed                                     │
+│                                                                                                                                                                                  │
+│   105 │   │   │   #   xcode-select: error: tool 'xcodebuild' requires Xcode, but active                                                                                          │
+│   106 │   │   │   #   developer directory '/Library/Developer/CommandLineTools' is a                                                                                             │
+│   107 │   │   │   #   command line tools instance                                                                                                                                │
+│ ❱ 108 │   │   │   output = tools.subprocess.check_output(["xcodebuild", "-version"], quiet=1)                                                                                    │
+│   109 │   │   │                                                                                                                                                                  │
+│   110 │   │   │   if min_version is not None:                                                                                                                                    │
+│   111 │   │   │   │   # Look for a line in the output that reads "Xcode X.Y.Z"                                                                                                   │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────── locals ─────────────────────────────────────────────────╮                                                                     │
+│ │    min_version = (13, 0, 0)                                                                              │                                                                     │
+│ │       preamble = 'You have the Xcode command line tools installed; however, Briefcase requires\na f'+128 │                                                                     │
+│ │          tools = <briefcase.integrations.base.ToolCache object at 0x106f5e3c0>                           │                                                                     │
+│ │ xcode_location = '/Applications/Xcode.app'                                                               │                                                                     │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                     │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/integrations/subprocess.py:125 in inner                                                    │
+│                                                                                                                                                                                  │
+│   122 │   │   """                                                                                                                                                                │
+│   123 │   │   # Just run the command if no dynamic elements are active                                                                                                           │
+│   124 │   │   if not sub.tools.console.is_console_controlled:                                                                                                                    │
+│ ❱ 125 │   │   │   return sub_method(sub, args, *wrapped_args, **wrapped_kwargs)                                                                                                  │
+│   126 │   │                                                                                                                                                                      │
+│   127 │   │   remove_dynamic_elements = False                                                                                                                                    │
+│   128                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────── locals ────────────────────────────────────────╮                                                                                        │
+│ │           args = ['xcodebuild', '-version']                                           │                                                                                        │
+│ │            sub = <briefcase.integrations.subprocess.Subprocess object at 0x106f5e510> │                                                                                        │
+│ │   wrapped_args = ()                                                                   │                                                                                        │
+│ │ wrapped_kwargs = {'quiet': 1}                                                         │                                                                                        │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────╯                                                                                        │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/integrations/subprocess.py:653 in check_output                                             │
+│                                                                                                                                                                                  │
+│   650 │   │   │   self._log_environment(kwargs.get("env"))                                     ╭─────────────────────────────────── locals ────────────────────────────────────╮ │
+│   651 │   │                                                                                    │   args = ['xcodebuild', '-version']                                           │ │
+│   652 │   │   try:                                                                             │ kwargs = {'stderr': -2}                                                       │ │
+│ ❱ 653 │   │   │   cmd_output = self._subprocess.check_output(                                  │  quiet = 1                                                                    │ │
+│   654 │   │   │   │   [str(arg) for arg in args], **self.final_kwargs(**kwargs)                │   self = <briefcase.integrations.subprocess.Subprocess object at 0x106f5e510> │ │
+│   655 │   │   │   )                                                                            ╰───────────────────────────────────────────────────────────────────────────────╯ │
+│   656 │   │   except subprocess.CalledProcessError as e:                                                                                                                         │
+│                                                                                                                                                                                  │
+│ /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py:472 in check_output                                                                              │
+│                                                                                                                                                                                  │
+│    469 │   │   │   empty = b''                                                                                                                                                   │
+│    470 │   │   kwargs['input'] = empty                                                                                                                                           │
+│    471 │                                                                                                                                                                         │
+│ ❱  472 │   return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,                                                                                                      │
+│    473 │   │   │      **kwargs).stdout                                                                                                                                           │
+│    474                                                                                                                                                                           │
+│    475                                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────── locals ───────────────────────────────────────────╮                                                                                  │
+│ │        kw = 'check'                                                                         │                                                                                  │
+│ │    kwargs = {'stderr': -2, 'text': True, 'encoding': 'UTF-8', 'errors': 'backslashreplace'} │                                                                                  │
+│ │ popenargs = (['xcodebuild', '-version'],)                                                   │                                                                                  │
+│ │   timeout = None                                                                            │                                                                                  │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────╯                                                                                  │
+│                                                                                                                                                                                  │
+│ /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py:577 in run                                                                                       │
+│                                                                                                                                                                                  │
+│    574 │   │   │   raise                                                                                                                                                         │
+│    575 │   │   retcode = process.poll()                                                                                                                                          │
+│    576 │   │   if check and retcode:                                                                                                                                             │
+│ ❱  577 │   │   │   raise CalledProcessError(retcode, process.args,                                                                                                               │
+│    578 │   │   │   │   │   │   │   │   │    output=stdout, stderr=stderr)                                                                                                        │
+│    579 │   return CompletedProcess(process.args, retcode, stdout, stderr)                                                                                                        │
+│    580                                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────────────── locals ────────────────────────────────────────────────────╮                                                               │
+│ │ capture_output = False                                                                                         │                                                               │
+│ │          check = True                                                                                          │                                                               │
+│ │          input = None                                                                                          │                                                               │
+│ │         kwargs = {'stdout': -1, 'stderr': -2, 'text': True, 'encoding': 'UTF-8', 'errors': 'backslashreplace'} │                                                               │
+│ │      popenargs = (['xcodebuild', '-version'],)                                                                 │                                                               │
+│ │        process = <Popen: returncode: 1 args: ['xcodebuild', '-version']>                                       │                                                               │
+│ │        retcode = 1                                                                                             │                                                               │
+│ │         stderr = None                                                                                          │                                                               │
+│ │         stdout = "xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer dire"+77         │                                                               │
+│ │        timeout = None                                                                                          │                                                               │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                               │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+CalledProcessError: Command '['xcodebuild', '-version']' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/__main__.py:27 in main                                                                     │
+│                                                                                                                                                                                  │
+│   24 │   │   │   Path.cwd() / "pyproject.toml",                                                                                                                                  │
+│   25 │   │   │   overrides=overrides,                                                                                                                                            │
+│   26 │   │   )                                                                                                                                                                   │
+│ ❱ 27 │   │   command(**options)                                                                                                                                                  │
+│   28 │   except HelpText as e:                                                                                                                                                   │
+│   29 │   │   console.info()                                                                                                                                                      │
+│   30 │   │   console.info(str(e))                                                                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────────────────────╮ │
+│ │       command = <briefcase.platforms.iOS.xcode.iOSXcodeCreateCommand object at 0x106f5d160>                                                                                  │ │
+│ │       console = <briefcase.console.Console object at 0x106f5c590>                                                                                                            │ │
+│ │             e = BriefcaseCommandError('You have the Xcode command line tools installed; however, Briefcase requires\na full Xcode install. Xcode can be downloaded from the  │ │
+│ │                 macOS App Store at\n<https://apps.apple.com/au/app/xcode/id497799835?mt=12>.\n\nOr, to use a version of Xcode installed in a non-default location:\n\n    $  │ │
+│ │                 sudo xcode-select --switch /path/to/Xcode.app\n\nand then re-run Briefcase.\n')                                                                              │ │
+│ │ extra_cmdline = []                                                                                                                                                           │ │
+│ │       options = {}                                                                                                                                                           │ │
+│ │     overrides = {}                                                                                                                                                           │ │
+│ │        result = 200                                                                                                                                                          │ │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/commands/create.py:1031 in __call__                                                        │
+│                                                                                                                                                                                  │
+│   1028 │   │                                                                                                                                                                     │
+│   1029 │   │   # Confirm host compatibility, that all required tools are available,                                                                                              │
+│   1030 │   │   # and finalize configurations for the apps that will be created.                                                                                                  │
+│ ❱ 1031 │   │   self.finalize(apps=apps_to_create.values())                                                                                                                       │
+│   1032 │   │                                                                                                                                                                     │
+│   1033 │   │   state = None                                                                                                                                                      │
+│   1034 │   │   for _, app_obj in sorted(apps_to_create.items()):                                                                                                                 │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────── locals ───────────────────────────────────────────╮                                                                                 │
+│ │            app = None                                                                        │                                                                                 │
+│ │       app_name = None                                                                        │                                                                                 │
+│ │ apps_to_create = {'attendance': <com.attendance.attendance v0.1.0 AppConfig>}                │                                                                                 │
+│ │        options = {}                                                                          │                                                                                 │
+│ │           self = <briefcase.platforms.iOS.xcode.iOSXcodeCreateCommand object at 0x106f5d160> │                                                                                 │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────╯                                                                                 │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/commands/base.py:740 in finalize                                                           │
+│                                                                                                                                                                                  │
+│    737 │   │   :param debugger_port: The port to use for the debugger                                                                                                            │
+│    738 │   │   """                                                                                                                                                               │
+│    739 │   │   self.verify_host()                                                                                                                                                │
+│ ❱  740 │   │   self.verify_tools()                                                                                                                                               │
+│    741 │   │                                                                                                                                                                     │
+│    742 │   │   for app in apps:                                                                                                                                                  │
+│    743 │   │   │   if hasattr(app, "__draft__"):                                                                                                                                 │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────── locals ───────────────────────────────────────────╮                                                                                  │
+│ │          apps = dict_values([<com.attendance.attendance v0.1.0 AppConfig>])                 │                                                                                  │
+│ │      debugger = None                                                                        │                                                                                  │
+│ │ debugger_host = None                                                                        │                                                                                  │
+│ │ debugger_port = None                                                                        │                                                                                  │
+│ │          self = <briefcase.platforms.iOS.xcode.iOSXcodeCreateCommand object at 0x106f5d160> │                                                                                  │
+│ │     test_mode = False                                                                       │                                                                                  │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────╯                                                                                  │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/platforms/iOS/__init__.py:20 in verify_tools                                               │
+│                                                                                                                                                                                  │
+│   17 │   platform_target_version: str | None = "0.3.20"                                                                                                                          │
+│   18 │                                                                                                                                                                           │
+│   19 │   def verify_tools(self):                                                                                                                                                 │
+│ ❱ 20 │   │   Xcode.verify(self.tools, min_version=(13, 0, 0))                                                                                                                    │
+│   21 │   │                                                                                                                                                                       │
+│   22 │   │   # Verify superclass tools *after* xcode. This ensures we get the                                                                                                    │
+│   23 │   │   # git check *after* the xcode check.                                                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────── locals ──────────────────────────────────────╮                                                                                           │
+│ │ self = <briefcase.platforms.iOS.xcode.iOSXcodeCreateCommand object at 0x106f5d160> │                                                                                           │
+│ ╰────────────────────────────────────────────────────────────────────────────────────╯                                                                                           │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/integrations/base.py:79 in verify                                                          │
+│                                                                                                                                                                                  │
+│    76 │   ) -> ToolT:                                                                          ╭──────────────────────────────── locals ────────────────────────────────╮        │
+│    77 │   │   """Confirm the tool is available and usable on the host platform."""             │    app = None                                                          │        │
+│    78 │   │   cls.verify_host(tools=tools)                                                     │ kwargs = {'min_version': (13, 0, 0)}                                   │        │
+│ ❱  79 │   │   tool = cls.verify_install(tools=tools, app=app, **kwargs)                        │  tools = <briefcase.integrations.base.ToolCache object at 0x106f5e3c0> │        │
+│    80 │   │   return tool                                                                      ╰────────────────────────────────────────────────────────────────────────╯        │
+│    81 │                                                                                                                                                                          │
+│    82 │   @classmethod                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/integrations/xcode.py:56 in verify_install                                                 │
+│                                                                                                                                                                                  │
+│    53 │   │   if hasattr(tools, "xcode"):                                                      ╭────────────────────────────────── locals ───────────────────────────────────╮   │
+│    54 │   │   │   return tools.xcode                                                           │      kwargs = {'app': None}                                                 │   │
+│    55 │   │                                                                                    │ min_version = (13, 0, 0)                                                    │   │
+│ ❱  56 │   │   cls.ensure_xcode_is_installed(tools=tools, min_version=min_version)              │       tools = <briefcase.integrations.base.ToolCache object at 0x106f5e3c0> │   │
+│    57 │   │   XcodeCliTools.verify(tools=tools)                                                ╰─────────────────────────────────────────────────────────────────────────────╯   │
+│    58 │   │                                                                                                                                                                      │
+│    59 │   │   tools.xcode = Xcode(tools=tools)                                                                                                                                   │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/integrations/xcode.py:181 in ensure_xcode_is_installed                                     │
+│                                                                                                                                                                                  │
+│   178 <https://apps.apple.com/au/app/xcode/id497799835?mt=12>.                                                                                                                   │
+│   179 """                                                                                                                                                                        │
+│   180 │   │   │   │                                                                                                                                                              │
+│ ❱ 181 │   │   │   │   raise BriefcaseCommandError(                                                                                                                               │
+│   182 │   │   │   │   │   preamble                                                                                                                                               │
+│   183 │   │   │   │   │   + """                                                                                                                                                  │
+│   184 Or, to use a version of Xcode installed in a non-default location:                                                                                                         │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────── locals ─────────────────────────────────────────────────╮                                                                     │
+│ │    min_version = (13, 0, 0)                                                                              │                                                                     │
+│ │       preamble = 'You have the Xcode command line tools installed; however, Briefcase requires\na f'+128 │                                                                     │
+│ │          tools = <briefcase.integrations.base.ToolCache object at 0x106f5e3c0>                           │                                                                     │
+│ │ xcode_location = '/Applications/Xcode.app'                                                               │                                                                     │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+BriefcaseCommandError: You have the Xcode command line tools installed; however, Briefcase requires
+a full Xcode install. Xcode can be downloaded from the macOS App Store at
+<https://apps.apple.com/au/app/xcode/id497799835?mt=12>.
+
+Or, to use a version of Xcode installed in a non-default location:
+
+    $ sudo xcode-select --switch /path/to/Xcode.app
+
+and then re-run Briefcase.
+

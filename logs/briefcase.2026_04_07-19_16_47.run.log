@@ -1,0 +1,504 @@
+Date/Time:       2026-04-07 19:16:48 
+Command line:    /Users/francisacharya/Desktop/attendance/.venv/bin/briefcase run android
+
+OS Release:      Darwin 23.0.0
+OS Version:      Darwin Kernel Version 23.0.0: Fri Sep 15 14:41:34 PDT 2023; root:xnu-10002.1.13~1/RELEASE_ARM64_T8103
+Architecture:    arm64
+Platform:        macOS-14.0-arm64-arm-64bit
+
+Python exe:      /Users/francisacharya/Desktop/attendance/.venv/bin/python3
+Python version:  3.9.6 (default, Feb  3 2024, 15:58:27)  [Clang 15.0.0 (clang-1500.3.9.4)]
+Virtual env:     True
+Conda env:       False
+
+Briefcase:       0.3.24
+Target platform: android
+Target format:   gradle
+
+Environment Variables:
+	ANTIGRAVITY_CLI_ALIAS=agy
+	BUNDLED_DEBUGPY_PATH=/Users/francisacharya/.antigravity/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/libs/debugpy
+	COLORTERM=truecolor
+	COMMAND_MODE=unix2003
+	GIT_ASKPASS=********************
+	HOME=/Users/francisacharya
+	HOMEBREW_CELLAR=/opt/homebrew/Cellar
+	HOMEBREW_PREFIX=/opt/homebrew
+	HOMEBREW_REPOSITORY=/opt/homebrew
+	INFOPATH=/opt/homebrew/share/info:/opt/homebrew/share/info:
+	LANG=en_US.UTF-8
+	LOGNAME=francisacharya
+	MallocNanoZone=0
+	NVM_BIN=/Users/francisacharya/.nvm/versions/node/v10.19.0/bin
+	NVM_CD_FLAGS=-q
+	NVM_DIR=/Users/francisacharya/.nvm
+	NVM_INC=/Users/francisacharya/.nvm/versions/node/v10.19.0/include/node
+	OLDPWD=/Users/francisacharya/Desktop/attendance
+	PATH=/Users/francisacharya/Desktop/attendance/.venv/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.nvm/versions/node/v10.19.0/bin:/opt/homebrew/opt/php@7.4/sbin:/opt/homebrew/opt/php@7.4/bin:/opt/homebrew/opt/openssl@3/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.nvm/versions/node/v10.19.0/bin:/opt/homebrew/opt/php@7.4/sbin:/opt/homebrew/opt/php@7.4/bin:/opt/homebrew/opt/openssl@3/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:/Users/francisacharya/development/flutter/bin:/Users/francisacharya/.antigravity/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts:/bin:/Users/francisacharya/development/flutter/bin
+	PS1=(.venv) %n@%m %1~ %# 
+	PWD=/Users/francisacharya/Desktop/attendance
+	PYDEVD_DISABLE_FILE_VALIDATION=1
+	PYTHONSTARTUP=/Users/francisacharya/Library/Application Support/Antigravity/User/workspaceStorage/704c1c470699449ad0c4c188addb6f07/ms-python.python/pythonrc.py
+	PYTHON_BASIC_REPL=1
+	SHELL=/bin/zsh
+	SHLVL=1
+	SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.RETPArqrh3/Listeners
+	TERM=xterm-256color
+	TERM_PROGRAM=vscode
+	TERM_PROGRAM_VERSION=1.107.0
+	TMPDIR=/var/folders/7y/kq9l7qk92hngdshm_mxpd2vh0000gn/T/
+	USER=francisacharya
+	USER_ZDOTDIR=/Users/francisacharya
+	VIRTUAL_ENV=/Users/francisacharya/Desktop/attendance/.venv
+	VSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/Users/francisacharya/.antigravity/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/.noConfigDebugAdapterEndpoints/endpoint-46bcb14b33bcab86.txt
+	VSCODE_GIT_ASKPASS_EXTRA_ARGS=********************
+	VSCODE_GIT_ASKPASS_MAIN=********************
+	VSCODE_GIT_ASKPASS_NODE=********************
+	VSCODE_GIT_IPC_HANDLE=/var/folders/7y/kq9l7qk92hngdshm_mxpd2vh0000gn/T/vscode-git-416d354d5b.sock
+	VSCODE_INJECTION=1
+	VSCODE_PROFILE_INITIALIZED=1
+	VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+	XPC_FLAGS=0x0
+	XPC_SERVICE_NAME=0
+	ZDOTDIR=/Users/francisacharya
+	_=/Users/francisacharya/Desktop/attendance/.venv/bin/briefcase
+	__CFBundleIdentifier=com.google.antigravity
+	__CF_USER_TEXT_ENCODING=0x1F5:0:15
+
+pyproject.toml:
+[tool.briefcase]
+project_name = "Attendance"
+bundle = "com.attendance"
+version = "0.1.3"
+display_name = "Attendance"
+description = "Campus Management & Attendance Portal"
+keywords = ["attendance", "education", "management"]
+author = "Francis Acharya"
+author_email = "francis@example.com"
+
+[tool.briefcase.app.attendance]
+formal_name = "Attendance"
+description = "A port of the attendance web features to mobile platforms."
+license.text = "Other"
+sources = ["src/attendance"]
+requires = [
+    "toga-core>=0.5.2",
+    "httpx",
+    "qrcode[pil]",
+    "pyzbar",
+    "Pillow",
+    "nepali-datetime"
+]
+
+[tool.briefcase.app.attendance.permissions]
+camera = "Allows you to scan class QR codes to mark attendance."
+internet = "Allows the app to communicate with the attendance server."
+
+[tool.briefcase.app.attendance.macOS]
+requires = [
+    "toga-cocoa>=0.5.2",
+]
+
+[tool.briefcase.app.attendance.macOS.permissions]
+camera = "Allows the app to scan class QR codes to mark attendance."
+
+[tool.briefcase.app.attendance.linux]
+requires = [
+    "toga-gtk>=0.5.2",
+]
+
+[tool.briefcase.app.attendance.windows]
+requires = [
+    "toga-winforms>=0.5.2",
+]
+
+[tool.briefcase.app.attendance.android]
+requires = [
+    "toga-android>=0.5.2",
+]
+build_gradle_dependencies = [
+    "androidx.appcompat:appcompat:1.6.1",
+    "androidx.constraintlayout:constraintlayout:2.1.4",
+    "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",
+]
+
+[tool.briefcase.app.attendance.android.permissions]
+camera = "Access to scan QR codes"
+internet = "Access to the backend server"
+"android.permission.WRITE_EXTERNAL_STORAGE" = "Allow saving captured QR photos temporarily"
+"android.permission.READ_EXTERNAL_STORAGE" = "Allow reading captured QR photos temporarily"
+
+
+
+[tool.briefcase.app.attendance.iOS]
+requires = [
+    "toga-iOS>=0.5.2",
+]
+
+[tool.briefcase.app.attendance.iOS.permissions]
+camera = "Access to scan QR codes"
+
+Briefcase Log:
+[19:16:26]                                                                                                                                                               base.py:302
+           *************************************************************************                                                                                     base.py:302
+           ** WARNING: Your Python version is unsupported!                        **                                                                                     base.py:302
+           *************************************************************************                                                                                     base.py:302
+                                                                                                                                                                         base.py:302
+               The version of Python you are using (3.9.6) is past its                                                                                                   base.py:302
+               end of life. As a result, it is highly likely your Briefcase                                                                                              base.py:302
+               version is also out of date.                                                                                                                              base.py:302
+                                                                                                                                                                         base.py:302
+               See https://devguide.python.org/versions/ for details on currently                                                                                        base.py:302
+               supported Python versions.                                                                                                                                base.py:302
+                                                                                                                                                                         base.py:302
+           *************************************************************************                                                                                     base.py:302
+                                                                                                                                                                         java.py:209
+           [Java JDK] Evaluating /usr/libexec/java_home...                                                                                                               java.py:209
+                                                                                                                                                                   subprocess.py:838
+           >>> Running Command:                                                                                                                                    subprocess.py:838
+           >>>     /usr/libexec/java_home                                                                                                                          subprocess.py:838
+           >>> Working Directory:                                                                                                                                  subprocess.py:838
+           >>>     /Users/francisacharya/Desktop/attendance                                                                                                        subprocess.py:838
+           >>> Command Output:                                                                                                                                     subprocess.py:838
+           >>>     The operation couldn’t be completed. Unable to locate a Java Runtime.                                                                           subprocess.py:838
+           >>>     Please visit http://www.java.com for information on installing Java.                                                                            subprocess.py:838
+           >>>                                                                                                                                                     subprocess.py:838
+           >>> Return code: 1                                                                                                                                      subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+           An existing JDK/JRE was not returned                                                                                                                          java.py:220
+           Using JDK at /Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/java17/Contents/Home                                                            java.py:259
+           Using Android SDK at /Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk                                                      android_sdk.py:375
+           Android emulator is already installed.                                                                                                                 android_sdk.py:650
+                                                                                                                                                                   subprocess.py:838
+           >>> Running Command:                                                                                                                                    subprocess.py:838
+           >>>     /Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk/platform-tools/adb devices -l                                      subprocess.py:838
+           >>> Working Directory:                                                                                                                                  subprocess.py:838
+           >>>     /Users/francisacharya/Desktop/attendance                                                                                                        subprocess.py:838
+           >>> Command Output:                                                                                                                                     subprocess.py:838
+           >>>     List of devices attached                                                                                                                        subprocess.py:838
+           >>>     emulator-5554          device product:sdk_phone64_arm64 model:Android_SDK_built_for_arm64 device:emulator64_arm64 transport_id:9                subprocess.py:838
+           >>>                                                                                                                                                     subprocess.py:838
+           >>> Return code: 0                                                                                                                                      subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+           >>> Running Command:                                                                                                                                    subprocess.py:838
+           >>>     /Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk/platform-tools/adb -s emulator-5554 emu avd name                   subprocess.py:838
+           >>> Working Directory:                                                                                                                                  subprocess.py:838
+           >>>     /Users/francisacharya/Desktop/attendance                                                                                                        subprocess.py:838
+           >>> Command Output:                                                                                                                                     subprocess.py:838
+           >>>     fandroid                                                                                                                                        subprocess.py:838
+           >>>     OK                                                                                                                                              subprocess.py:838
+           >>> Return code: 0                                                                                                                                      subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+           >>> Running Command:                                                                                                                                    subprocess.py:838
+           >>>     /Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk/emulator/emulator -list-avds                                       subprocess.py:838
+           >>> Working Directory:                                                                                                                                  subprocess.py:838
+           >>>     /Users/francisacharya/Desktop/attendance                                                                                                        subprocess.py:838
+           >>> Command Output:                                                                                                                                     subprocess.py:838
+           >>>     Pixel_4a_API_33                                                                                                                                 subprocess.py:838
+           >>>     fandroid                                                                                                                                        subprocess.py:838
+           >>> Return code: 0                                                                                                                                      subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+                                                                                                                                                                      console.py:697
+                                                                                                                                                                      console.py:698
+           -- Android device ---------------------------------------------------                                                                                      console.py:699
+                                                                                                                                                                      console.py:935
+           Select Android device to use:                                                                                                                              console.py:936
+                                                                                                                                                                      console.py:937
+             1) @fandroid (running emulator)                                                                                                                          console.py:951
+             2) @Pixel_4a_API_33 (emulator)                                                                                                                           console.py:951
+             3) Create a new Android emulator                                                                                                                         console.py:951
+                                                                                                                                                                      console.py:953
+[19:16:47] Android device:                                                                                                                                            console.py:956
+           User input: 1                                                                                                                                              console.py:956
+                                                                                                                                                                 android_sdk.py:1076
+           In future, you can specify this device by running:                                                                                                    android_sdk.py:1076
+                                                                                                                                                                 android_sdk.py:1076
+               $ briefcase run android -d "@fandroid"                                                                                                            android_sdk.py:1076
+                                                                                                                                                                       gradle.py:407
+           [attendance] Starting app on @fandroid (running emulator) (device ID emulator-5554)                                                                         gradle.py:407
+                                                                                                                                                                       gradle.py:419
+           [attendance] Installing app...                                                                                                                              gradle.py:419
+           Stopping old versions of the app... started                                                                                                                 gradle.py:420
+                                                                                                                                                                   subprocess.py:838
+           >>> Running Command:                                                                                                                                    subprocess.py:838
+           >>>     /Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk/platform-tools/adb -s emulator-5554 shell am force-stop            subprocess.py:838
+           com.attendance.attendance                                                                                                                                                
+           >>> Working Directory:                                                                                                                                  subprocess.py:838
+           >>>     /Users/francisacharya/Desktop/attendance                                                                                                        subprocess.py:838
+           >>> Command Output:                                                                                                                                     subprocess.py:838
+           >>>     adb: device 'emulator-5554' not found                                                                                                           subprocess.py:838
+           >>> Return code: 1                                                                                                                                      subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+           Stopping old versions of the app... errored                                                                                                                 gradle.py:421
+                                                                                                                                                                      __main__.py:42
+           Unable to force stop app com.attendance.attendance on emulator-5554                                                                                        __main__.py:43
+           Saving log... started                                                                                                                                      console.py:433
+
+Main thread traceback:
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.9/site-packages/briefcase/integrations/android_sdk.py:1511 in force_stop_app                                          │
+│                                                                                                                                                                                  │
+│   1508 │   │   # as you pass a package name, even if the package does not exist, or the         ╭───────────────────────────────── locals ─────────────────────────────────╮     │
+│   1509 │   │   # package is not running.                                                        │ package = 'com.attendance.attendance'                                    │     │
+│   1510 │   │   try:                                                                             │    self = <briefcase.integrations.android_sdk.ADB object at 0x105f69cd0> │     │
+│ ❱ 1511 │   │   │   self.run("shell", "am", "force-stop", package)                               ╰──────────────────────────────────────────────────────────────────────────╯     │
+│   1512 │   │   except subprocess.CalledProcessError as e:                                                                                                                        │
+│   1513 │   │   │   raise BriefcaseCommandError(                                                                                                                                  │
+│   1514 │   │   │   │   f"Unable to force stop app {package} on {self.device}"                                                                                                    │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.9/site-packages/briefcase/integrations/android_sdk.py:1471 in run                                                     │
+│                                                                                                                                                                                  │
+│   1468 │   │   # checking that they are valid, then parsing output to notice errors.            ╭────────────────────────────────── locals ──────────────────────────────────╮   │
+│   1469 │   │   # This keeps performance good in the success case.                               │ arguments = ('shell', 'am', 'force-stop', 'com.attendance.attendance')     │   │
+│   1470 │   │   try:                                                                             │     quiet = 0                                                              │   │
+│ ❱ 1471 │   │   │   output = self.tools.subprocess.check_output(                                 │      self = <briefcase.integrations.android_sdk.ADB object at 0x105f69cd0> │   │
+│   1472 │   │   │   │   [self.tools.android_sdk.adb_path, "-s", self.device] + list(arguments),  ╰────────────────────────────────────────────────────────────────────────────╯   │
+│   1473 │   │   │   │   quiet=quiet,                                                                                                                                              │
+│   1474 │   │   │   )                                                                                                                                                             │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.9/site-packages/briefcase/integrations/subprocess.py:144 in inner                                                     │
+│                                                                                                                                                                                  │
+│   141 │   │   │   with sub.tools.console.release_console_control():                                                                                                              │
+│   142 │   │   │   │   return sub_method(sub, args, *wrapped_args, **wrapped_kwargs)                                                                                              │
+│   143 │   │   else:                                                                                                                                                              │
+│ ❱ 144 │   │   │   return sub_method(sub, args, *wrapped_args, **wrapped_kwargs)                                                                                                  │
+│   145 │                                                                                                                                                                          │
+│   146 │   return inner                                                                                                                                                           │
+│   147                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────╮                                  │
+│ │                    args = [                                                                                                                 │                                  │
+│ │                           │   PosixPath('/Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk/platform-tools/adb'), │                                  │
+│ │                           │   '-s',                                                                                                         │                                  │
+│ │                           │   'emulator-5554',                                                                                              │                                  │
+│ │                           │   'shell',                                                                                                      │                                  │
+│ │                           │   'am',                                                                                                         │                                  │
+│ │                           │   'force-stop',                                                                                                 │                                  │
+│ │                           │   'com.attendance.attendance'                                                                                   │                                  │
+│ │                           ]                                                                                                                 │                                  │
+│ │ remove_dynamic_elements = False                                                                                                             │                                  │
+│ │                     sub = <briefcase.integrations.subprocess.Subprocess object at 0x105e391f0>                                              │                                  │
+│ │            wrapped_args = ()                                                                                                                │                                  │
+│ │          wrapped_kwargs = {'quiet': 0}                                                                                                      │                                  │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                  │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.9/site-packages/briefcase/integrations/subprocess.py:652 in check_output                                              │
+│                                                                                                                                                                                  │
+│   649 │   │   │   self._log_environment(kwargs.get("env"))                                                                                                                       │
+│   650 │   │                                                                                                                                                                      │
+│   651 │   │   try:                                                                                                                                                               │
+│ ❱ 652 │   │   │   cmd_output = self._subprocess.check_output(                                                                                                                    │
+│   653 │   │   │   │   [str(arg) for arg in args], **self.final_kwargs(**kwargs)                                                                                                  │
+│   654 │   │   │   )                                                                                                                                                              │
+│   655 │   │   except subprocess.CalledProcessError as e:                                                                                                                         │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────────────── locals ──────────────────────────────────────────────────────────╮                                                   │
+│ │   args = [                                                                                                                 │                                                   │
+│ │          │   PosixPath('/Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk/platform-tools/adb'), │                                                   │
+│ │          │   '-s',                                                                                                         │                                                   │
+│ │          │   'emulator-5554',                                                                                              │                                                   │
+│ │          │   'shell',                                                                                                      │                                                   │
+│ │          │   'am',                                                                                                         │                                                   │
+│ │          │   'force-stop',                                                                                                 │                                                   │
+│ │          │   'com.attendance.attendance'                                                                                   │                                                   │
+│ │          ]                                                                                                                 │                                                   │
+│ │ kwargs = {'stderr': -2}                                                                                                    │                                                   │
+│ │  quiet = 0                                                                                                                 │                                                   │
+│ │   self = <briefcase.integrations.subprocess.Subprocess object at 0x105e391f0>                                              │                                                   │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                   │
+│                                                                                                                                                                                  │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py:424 in check_output                                            │
+│                                                                                                                                                                                  │
+│    421 │   │   │   empty = b''                                                                                                                                                   │
+│    422 │   │   kwargs['input'] = empty                                                                                                                                           │
+│    423 │                                                                                                                                                                         │
+│ ❱  424 │   return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,                                                                                                      │
+│    425 │   │   │      **kwargs).stdout                                                                                                                                           │
+│    426                                                                                                                                                                           │
+│    427                                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────── locals ──────────────────────────────────────────────────╮                                                                   │
+│ │    kwargs = {'stderr': -2, 'text': True, 'encoding': 'UTF-8', 'errors': 'backslashreplace'}                │                                                                   │
+│ │ popenargs = (                                                                                              │                                                                   │
+│ │             │   [                                                                                          │                                                                   │
+│ │             │   │   '/Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk/pla'+15, │                                                                   │
+│ │             │   │   '-s',                                                                                  │                                                                   │
+│ │             │   │   'emulator-5554',                                                                       │                                                                   │
+│ │             │   │   'shell',                                                                               │                                                                   │
+│ │             │   │   'am',                                                                                  │                                                                   │
+│ │             │   │   'force-stop',                                                                          │                                                                   │
+│ │             │   │   'com.attendance.attendance'                                                            │                                                                   │
+│ │             │   ],                                                                                         │                                                                   │
+│ │             )                                                                                              │                                                                   │
+│ │   timeout = None                                                                                           │                                                                   │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                   │
+│                                                                                                                                                                                  │
+│ /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py:528 in run                                                     │
+│                                                                                                                                                                                  │
+│    525 │   │   │   raise                                                                                                                                                         │
+│    526 │   │   retcode = process.poll()                                                                                                                                          │
+│    527 │   │   if check and retcode:                                                                                                                                             │
+│ ❱  528 │   │   │   raise CalledProcessError(retcode, process.args,                                                                                                               │
+│    529 │   │   │   │   │   │   │   │   │    output=stdout, stderr=stderr)                                                                                                        │
+│    530 │   return CompletedProcess(process.args, retcode, stdout, stderr)                                                                                                        │
+│    531                                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────╮                                                              │
+│ │ capture_output = False                                                                                          │                                                              │
+│ │          check = True                                                                                           │                                                              │
+│ │          input = None                                                                                           │                                                              │
+│ │         kwargs = {'stdout': -1, 'stderr': -2, 'text': True, 'encoding': 'UTF-8', 'errors': 'backslashreplace'}  │                                                              │
+│ │      popenargs = (                                                                                              │                                                              │
+│ │                  │   [                                                                                          │                                                              │
+│ │                  │   │   '/Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk/pla'+15, │                                                              │
+│ │                  │   │   '-s',                                                                                  │                                                              │
+│ │                  │   │   'emulator-5554',                                                                       │                                                              │
+│ │                  │   │   'shell',                                                                               │                                                              │
+│ │                  │   │   'am',                                                                                  │                                                              │
+│ │                  │   │   'force-stop',                                                                          │                                                              │
+│ │                  │   │   'com.attendance.attendance'                                                            │                                                              │
+│ │                  │   ],                                                                                         │                                                              │
+│ │                  )                                                                                              │                                                              │
+│ │        process = <Popen: returncode: 1 args: ['/Users/francisacharya/Library/Caches/org.beewa...>               │                                                              │
+│ │        retcode = 1                                                                                              │                                                              │
+│ │         stderr = None                                                                                           │                                                              │
+│ │         stdout = "adb: device 'emulator-5554' not found\n"                                                      │                                                              │
+│ │        timeout = None                                                                                           │                                                              │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+CalledProcessError: Command '['/Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk/platform-tools/adb', '-s', 'emulator-5554', 'shell', 'am', 'force-stop', 'com.attendance.attendance']' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.9/site-packages/briefcase/__main__.py:27 in main                                                                      │
+│                                                                                                                                                                                  │
+│   24 │   │   │   Path.cwd() / "pyproject.toml",                                                                                                                                  │
+│   25 │   │   │   overrides=overrides,                                                                                                                                            │
+│   26 │   │   )                                                                                                                                                                   │
+│ ❱ 27 │   │   command(**options)                                                                                                                                                  │
+│   28 │   except HelpText as e:                                                                                                                                                   │
+│   29 │   │   console.info()                                                                                                                                                      │
+│   30 │   │   console.info(str(e))                                                                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────── locals ───────────────────────────────────────────────────╮                                                                 │
+│ │       command = <briefcase.platforms.android.gradle.GradleRunCommand object at 0x102b3a070>                  │                                                                 │
+│ │       console = <briefcase.console.Console object at 0x1026471c0>                                            │                                                                 │
+│ │             e = BriefcaseCommandError('Unable to force stop app com.attendance.attendance on emulator-5554') │                                                                 │
+│ │ extra_cmdline = []                                                                                           │                                                                 │
+│ │       options = {                                                                                            │                                                                 │
+│ │                 │   'appname': None,                                                                         │                                                                 │
+│ │                 │   'update': False,                                                                         │                                                                 │
+│ │                 │   'update_requirements': False,                                                            │                                                                 │
+│ │                 │   'update_support': False,                                                                 │                                                                 │
+│ │                 │   'update_stub': False,                                                                    │                                                                 │
+│ │                 │   'update_resources': False,                                                               │                                                                 │
+│ │                 │   'no_update': False,                                                                      │                                                                 │
+│ │                 │   'test_mode': False,                                                                      │                                                                 │
+│ │                 │   'device_or_avd': None,                                                                   │                                                                 │
+│ │                 │   'extra_emulator_args': None,                                                             │                                                                 │
+│ │                 │   ... +2                                                                                   │                                                                 │
+│ │                 }                                                                                            │                                                                 │
+│ │     overrides = {}                                                                                           │                                                                 │
+│ │        result = 200                                                                                          │                                                                 │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                 │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.9/site-packages/briefcase/commands/run.py:327 in __call__                                                             │
+│                                                                                                                                                                                  │
+│   324 │   │   │   │   "(apps defining 'external_package_path') cannot be run."                                                                                                   │
+│   325 │   │   │   )                                                                                                                                                              │
+│   326 │   │                                                                                                                                                                      │
+│ ❱ 327 │   │   state = self.run_app(                                                                                                                                              │
+│   328 │   │   │   app,                                                                                                                                                           │
+│   329 │   │   │   passthrough=[] if passthrough is None else passthrough,                                                                                                        │
+│   330 │   │   │   **full_options(state, options),                                                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────────────────────── locals ────────────────────────────────────────────────────────────────────────╮                        │
+│ │                 app = <com.attendance.attendance v0.1.3 AppConfig>                                                                                    │                        │
+│ │             appname = None                                                                                                                            │                        │
+│ │           exec_file = PosixPath('/Users/francisacharya/Desktop/attendance/build/attendance/android/gradle/app/build/outputs/apk/debug/app-debug.apk') │                        │
+│ │           no_update = False                                                                                                                           │                        │
+│ │             options = {'device_or_avd': None, 'extra_emulator_args': None, 'shutdown_on_exit': False}                                                 │                        │
+│ │         passthrough = []                                                                                                                              │                        │
+│ │                self = <briefcase.platforms.android.gradle.GradleRunCommand object at 0x102b3a070>                                                     │                        │
+│ │               state = None                                                                                                                            │                        │
+│ │       template_file = PosixPath('/Users/francisacharya/Desktop/attendance/build/attendance/android/gradle')                                           │                        │
+│ │           test_mode = False                                                                                                                           │                        │
+│ │              update = False                                                                                                                           │                        │
+│ │ update_requirements = False                                                                                                                           │                        │
+│ │    update_resources = False                                                                                                                           │                        │
+│ │         update_stub = False                                                                                                                           │                        │
+│ │      update_support = False                                                                                                                           │                        │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                        │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.9/site-packages/briefcase/platforms/android/gradle.py:421 in run_app                                                  │
+│                                                                                                                                                                                  │
+│   418 │   │   │   # We force-stop the app to ensure the activity launches freshly.                                                                                               │
+│   419 │   │   │   self.console.info("Installing app...", prefix=app.app_name)                                                                                                    │
+│   420 │   │   │   with self.console.wait_bar("Stopping old versions of the app..."):                                                                                             │
+│ ❱ 421 │   │   │   │   adb.force_stop_app(package)                                                                                                                                │
+│   422 │   │   │                                                                                                                                                                  │
+│   423 │   │   │   # Install the latest APK file onto the device.                                                                                                                 │
+│   424 │   │   │   with self.console.wait_bar("Installing new app version..."):                                                                                                   │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────── locals ──────────────────────────────────────────────╮                                                                            │
+│ │                 adb = <briefcase.integrations.android_sdk.ADB object at 0x105f69cd0>              │                                                                            │
+│ │                 app = <com.attendance.attendance v0.1.3 AppConfig>                                │                                                                            │
+│ │                 avd = 'fandroid'                                                                  │                                                                            │
+│ │              device = 'emulator-5554'                                                             │                                                                            │
+│ │       device_or_avd = None                                                                        │                                                                            │
+│ │ extra_emulator_args = None                                                                        │                                                                            │
+│ │              kwargs = {}                                                                          │                                                                            │
+│ │               label = 'app'                                                                       │                                                                            │
+│ │                name = '@fandroid (running emulator)'                                              │                                                                            │
+│ │             package = 'com.attendance.attendance'                                                 │                                                                            │
+│ │         passthrough = []                                                                          │                                                                            │
+│ │                self = <briefcase.platforms.android.gradle.GradleRunCommand object at 0x102b3a070> │                                                                            │
+│ │    shutdown_on_exit = False                                                                       │                                                                            │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                            │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.9/site-packages/briefcase/integrations/android_sdk.py:1513 in force_stop_app                                          │
+│                                                                                                                                                                                  │
+│   1510 │   │   try:                                                                             ╭───────────────────────────────── locals ─────────────────────────────────╮     │
+│   1511 │   │   │   self.run("shell", "am", "force-stop", package)                               │ package = 'com.attendance.attendance'                                    │     │
+│   1512 │   │   except subprocess.CalledProcessError as e:                                       │    self = <briefcase.integrations.android_sdk.ADB object at 0x105f69cd0> │     │
+│ ❱ 1513 │   │   │   raise BriefcaseCommandError(                                                 ╰──────────────────────────────────────────────────────────────────────────╯     │
+│   1514 │   │   │   │   f"Unable to force stop app {package} on {self.device}"                                                                                                    │
+│   1515 │   │   │   ) from e                                                                                                                                                      │
+│   1516                                                                                                                                                                           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+BriefcaseCommandError: Unable to force stop app com.attendance.attendance on emulator-5554
+           Collecting extra information for log... started                                                                                                            console.py:468
+                                                                                                                                                                      console.py:472
+           Extra information:                                                                                                                                         console.py:473
+                                                                                                                                                                   subprocess.py:838
+           >>> Running Command:                                                                                                                                    subprocess.py:838
+           >>>     /Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk/cmdline-tools/19.0/bin/sdkmanager --list_installed                 subprocess.py:838
+           >>> Working Directory:                                                                                                                                  subprocess.py:838
+           >>>     /Users/francisacharya/Desktop/attendance                                                                                                        subprocess.py:838
+           >>> Environment Overrides:                                                                                                                              subprocess.py:838
+           >>>     ANDROID_HOME=/Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk                                                       subprocess.py:838
+           >>>     ANDROID_SDK_ROOT=/Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/android_sdk                                                   subprocess.py:838
+           >>>     JAVA_HOME=/Users/francisacharya/Library/Caches/org.beeware.briefcase/tools/java17/Contents/Home                                                 subprocess.py:838
+[19:16:48] >>> Command Output:                                                                                                                                     subprocess.py:838
+           >>>     Loading package information...                                                                                                                  subprocess.py:838
+           >>>     Loading local repository...                                                                                                                     subprocess.py:838
+           >>>     [=========                              ] 25% Loading local repository...                                                                       subprocess.py:838
+           >>>     [=========                              ] 25% Fetch remote repository...                                                                        subprocess.py:838
+           >>>     [=======================================] 100% Fetch remote repository...                                                                       subprocess.py:838
+           >>>     Installed packages:                                                                                                                             subprocess.py:838
+           >>>       Path                                       | Version | Description                | Location                                                  subprocess.py:838
+           >>>       -------                                    | ------- | -------                    | -------                                                   subprocess.py:838
+           >>>       build-tools;34.0.0                         | 34.0.0  | Android SDK Build-Tools 34 | build-tools/34.0.0                                        subprocess.py:838
+           >>>       build-tools;35.0.0                         | 35.0.0  | Android SDK Build-Tools 35 | build-tools/35.0.0                                        subprocess.py:838
+           >>>       emulator                                   | 36.5.10 | Android Emulator           | emulator                                                  subprocess.py:838
+           >>>       platform-tools                             | 37.0.0  | Android SDK Platform-Tools | platform-tools                                            subprocess.py:838
+           >>>       platforms;android-34                       | 3       | Android SDK Platform 34    | platforms/android-34                                      subprocess.py:838
+           >>>       platforms;android-35                       | 2       | Android SDK Platform 35    | platforms/android-35                                      subprocess.py:838
+           >>>       system-images;android-31;default;arm64-v8a | 4       | ARM 64 v8a System Image    | system-images/android-31/default/arm64-v8a                subprocess.py:838
+           >>>                                                                                                                                                     subprocess.py:838
+           >>> Return code: 0                                                                                                                                      subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+           Collecting extra information for log... done                                                                                                               console.py:478

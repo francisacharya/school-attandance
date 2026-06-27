@@ -1,0 +1,71 @@
+[tool.briefcase]
+project_name = "Attendance"
+bundle = "com.attendance"
+version = "0.1.3"
+display_name = "Attendance"
+description = "Campus Management & Attendance Portal"
+keywords = ["attendance", "education", "management"]
+author = "Francis Acharya"
+author_email = "francis@example.com"
+
+[tool.briefcase.app.attendance]
+formal_name = "Attendance"
+description = "A port of the attendance web features to mobile platforms."
+license.text = "Other"
+sources = ["src/attendance"]
+requires = [
+    "toga-core>=0.5.2",
+    "httpx",
+    "qrcode[pil]",
+    "pyzbar",
+    "Pillow",
+    "nepali-datetime"
+]
+
+[tool.briefcase.app.attendance.permissions]
+camera = "Allows you to scan class QR codes to mark attendance."
+internet = "Allows the app to communicate with the attendance server."
+
+[tool.briefcase.app.attendance.macOS]
+requires = [
+    "toga-cocoa>=0.5.2",
+]
+
+[tool.briefcase.app.attendance.macOS.permissions]
+camera = "Allows the app to scan class QR codes to mark attendance."
+
+[tool.briefcase.app.attendance.linux]
+requires = [
+    "toga-gtk>=0.5.2",
+]
+
+[tool.briefcase.app.attendance.windows]
+requires = [
+    "toga-winforms>=0.5.2",
+]
+
+[tool.briefcase.app.attendance.android]
+requires = [
+    "toga-android>=0.5.2",
+]
+build_gradle_dependencies = [
+    "androidx.appcompat:appcompat:1.6.1",
+    "androidx.constraintlayout:constraintlayout:2.1.4",
+    "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",
+]
+
+[tool.briefcase.app.attendance.android.permissions]
+camera = "Access to scan QR codes"
+internet = "Access to the backend server"
+"android.permission.WRITE_EXTERNAL_STORAGE" = "Allow saving captured QR photos temporarily"
+"android.permission.READ_EXTERNAL_STORAGE" = "Allow reading captured QR photos temporarily"
+
+
+
+[tool.briefcase.app.attendance.iOS]
+requires = [
+    "toga-iOS>=0.5.2",
+]
+
+[tool.briefcase.app.attendance.iOS.permissions]
+camera = "Access to scan QR codes"

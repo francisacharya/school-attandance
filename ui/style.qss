@@ -1,0 +1,160 @@
+/* Modern Dark Mode QSS for Attendance App */
+
+* {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #cdd6f4; /* Foreground text */
+}
+
+/* Main Window & Dialogs */
+QMainWindow, QDialog, QWidget {
+    background-color: #1e1e2e;
+}
+
+/* Titles and Headers */
+QLabel {
+    color: #cdd6f4;
+}
+QLabel[styleClass="h1"], QLabel h1, QLabel h2, QLabel h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #89b4fa; /* Accent color for headers */
+    margin-bottom: 5px;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #89b4fa; /* Primary blue */
+    color: #11111b; /* Dark text on button */
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+QPushButton:hover {
+    background-color: #b4befe; /* Lighter blue */
+}
+QPushButton:pressed {
+    background-color: #74c7ec;
+}
+QPushButton:disabled {
+    background-color: #45475a;
+    color: #7f849c;
+}
+
+/* Input Fields */
+QLineEdit, QTextEdit, QComboBox, QSpinBox, QDateEdit {
+    background-color: #181825;
+    border: 1px solid #313244;
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #cdd6f4;
+    selection-background-color: #89b4fa;
+}
+QLineEdit:focus, QTextEdit:focus, QComboBox:focus, QSpinBox:focus, QDateEdit:focus {
+    border: 1px solid #89b4fa;
+}
+
+/* ComboBox dropdown list */
+QComboBox::drop-down {
+    border: none;
+    background-color: transparent;
+}
+QComboBox QAbstractItemView {
+    background-color: #181825;
+    border: 1px solid #313244;
+    selection-background-color: #313244;
+    color: #cdd6f4;
+}
+
+/* Navigation List Widget (Left Sidebar) */
+QListWidget {
+    background-color: #181825;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    outline: none; /* remove focus rectangle */
+}
+QListWidget::item {
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+QListWidget::item:hover {
+    background-color: #313244;
+}
+QListWidget::item:selected {
+    background-color: #89b4fa;
+    color: #11111b;
+    font-weight: 600;
+}
+
+/* Tables */
+QTableWidget {
+    background-color: #181825;
+    border: 1px solid #313244;
+    border-radius: 6px;
+    gridline-color: #313244;
+    selection-background-color: #313244; /* Selection color */
+    selection-color: #89b4fa; /* Text color when selected */
+}
+QHeaderView::section {
+    background-color: #11111b;
+    color: #a6adc8;
+    padding: 6px 10px;
+    border: none;
+    border-bottom: 1px solid #313244;
+    font-weight: bold;
+}
+QTableWidget::item {
+    padding: 5px;
+}
+
+/* Splitter */
+QSplitter::handle {
+    background-color: transparent;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    border: none;
+    background-color: transparent;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+    background-color: #45475a;
+    min-height: 20px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background-color: #585b70;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QScrollBar:horizontal {
+    border: none;
+    background-color: transparent;
+    height: 10px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:horizontal {
+    background-color: #45475a;
+    min-width: 20px;
+    border-radius: 5px;
+}
+QScrollBar::handle:horizontal:hover {
+    background-color: #585b70;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* Dashboard Metric Cards */
+QLabel[styleClass="dashboardCard"] {
+    background-color: #181825;
+    border: 1px solid #313244;
+    border-radius: 8px;
+    padding: 20px;
+}

@@ -1,0 +1,8 @@
+# Generated 2026-04-07 19:08:37.287943
+toga-core>=0.5.2
+httpx
+qrcode[pil]
+pyzbar
+Pillow
+nepali-datetime
+toga-android>=0.5.2

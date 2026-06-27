@@ -1,0 +1,355 @@
+Date/Time:       2026-04-05 21:29:46 
+Command line:    /Users/francisacharya/Desktop/attendance/.venv/bin/briefcase dev
+
+OS Release:      Darwin 23.0.0
+OS Version:      Darwin Kernel Version 23.0.0: Fri Sep 15 14:41:34 PDT 2023; root:xnu-10002.1.13~1/RELEASE_ARM64_T8103
+Architecture:    arm64
+Platform:        macOS-14.0-arm64-arm-64bit-Mach-O
+
+Python exe:      /Users/francisacharya/Desktop/attendance/.venv/bin/python3.14
+Python version:  3.14.3 (v3.14.3:323c59a5e34, Feb  3 2026, 11:41:37) [Clang 16.0.0 (clang-1600.0.26.6)]
+Virtual env:     True
+Conda env:       False
+
+Briefcase:       0.4.1
+Target platform: macOS
+Target format:   app
+
+Environment Variables:
+	ANTIGRAVITY_CLI_ALIAS=agy
+	BUNDLED_DEBUGPY_PATH=/Users/francisacharya/.antigravity/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/libs/debugpy
+	COLORTERM=truecolor
+	COMMAND_MODE=unix2003
+	GIT_ASKPASS=********************
+	HOME=/Users/francisacharya
+	HOMEBREW_CELLAR=/opt/homebrew/Cellar
+	HOMEBREW_PREFIX=/opt/homebrew
+	HOMEBREW_REPOSITORY=/opt/homebrew
+	INFOPATH=/opt/homebrew/share/info:/opt/homebrew/share/info:
+	LANG=en_US.UTF-8
+	LOGNAME=francisacharya
+	MANPATH=/Users/francisacharya/.nvm/versions/node/v10.19.0/share/man:/opt/homebrew/share/man:/usr/share/man:/usr/local/share/man:/Users/francisacharya/.nvm/versions/node/v10.19.0/share/man:/opt/homebrew/share/man::
+	MallocNanoZone=0
+	NVM_BIN=/Users/francisacharya/.nvm/versions/node/v10.19.0/bin
+	NVM_CD_FLAGS=-q
+	NVM_DIR=/Users/francisacharya/.nvm
+	NVM_INC=/Users/francisacharya/.nvm/versions/node/v10.19.0/include/node
+	OLDPWD=/Users/francisacharya/Desktop/attendance
+	PATH=/Users/francisacharya/Desktop/attendance/.venv/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.nvm/versions/node/v10.19.0/bin:/opt/homebrew/opt/php@7.4/sbin:/opt/homebrew/opt/php@7.4/bin:/opt/homebrew/opt/openssl@3/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Users/francisacharya/.nvm/versions/node/v10.19.0/bin:/opt/homebrew/opt/php@7.4/sbin:/opt/homebrew/opt/php@7.4/bin:/opt/homebrew/opt/openssl@3/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/francisacharya/development/flutter/bin:/Users/francisacharya/.antigravity/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts:/bin:/Users/francisacharya/development/flutter/bin
+	PS1=(.venv) %n@%m %1~ %# 
+	PWD=/Users/francisacharya/Desktop/attendance
+	PYDEVD_DISABLE_FILE_VALIDATION=1
+	PYTHONSTARTUP=/Users/francisacharya/Library/Application Support/Antigravity/User/workspaceStorage/704c1c470699449ad0c4c188addb6f07/ms-python.python/pythonrc.py
+	PYTHON_BASIC_REPL=1
+	SHELL=/bin/zsh
+	SHLVL=1
+	SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.Qx0URu8U5E/Listeners
+	TERM=xterm-256color
+	TERM_PROGRAM=vscode
+	TERM_PROGRAM_VERSION=1.107.0
+	TMPDIR=/var/folders/7y/kq9l7qk92hngdshm_mxpd2vh0000gn/T/
+	USER=francisacharya
+	USER_ZDOTDIR=/Users/francisacharya
+	VIRTUAL_ENV=/Users/francisacharya/Desktop/attendance/.venv
+	VIRTUAL_ENV_PROMPT=.venv
+	VSCODE_DEBUGPY_ADAPTER_ENDPOINTS=/Users/francisacharya/.antigravity/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/.noConfigDebugAdapterEndpoints/endpoint-46bcb14b33bcab86.txt
+	VSCODE_GIT_ASKPASS_EXTRA_ARGS=********************
+	VSCODE_GIT_ASKPASS_MAIN=********************
+	VSCODE_GIT_ASKPASS_NODE=********************
+	VSCODE_GIT_IPC_HANDLE=/var/folders/7y/kq9l7qk92hngdshm_mxpd2vh0000gn/T/vscode-git-416d354d5b.sock
+	VSCODE_INJECTION=1
+	VSCODE_PROFILE_INITIALIZED=1
+	VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+	XPC_FLAGS=0x0
+	XPC_SERVICE_NAME=0
+	ZDOTDIR=/Users/francisacharya
+	_=/Users/francisacharya/Desktop/attendance/.venv/bin/briefcase
+	__CFBundleIdentifier=com.google.antigravity
+	__CF_USER_TEXT_ENCODING=0x1F5:0:15
+
+pyproject.toml:
+[tool.briefcase]
+project_name = "Attendance"
+bundle = "com.attendance"
+version = "0.1.0"
+display_name = "Attendance"
+description = "Campus Management & Attendance Portal"
+keywords = ["attendance", "education", "management"]
+author = "Francis Acharya"
+author_email = "francis@example.com"
+
+[tool.briefcase.app.attendance]
+formal_name = "Attendance"
+description = "A port of the attendance web features to mobile platforms."
+license.text = "Other"
+sources = ["src/attendance"]
+requires = [
+    "toga>=0.5.3",
+    "httpx",
+    "qrcode[pil]",
+    "pyzbar",
+    "Pillow",
+    "nepali-datetime"
+]
+
+[tool.briefcase.app.attendance.macOS]
+requires = [
+    "toga-cocoa>=0.5.3",
+]
+
+[tool.briefcase.app.attendance.linux]
+requires = [
+    "toga-gtk>=0.5.3",
+]
+
+[tool.briefcase.app.attendance.windows]
+requires = [
+    "toga-winforms>=0.5.3",
+]
+
+[tool.briefcase.app.attendance.android]
+requires = [
+    "toga-android>=0.5.3",
+]
+
+[tool.briefcase.app.attendance.android.permissions]
+camera = "Access to scan QR codes"
+internet = "Access to the backend server"
+
+[tool.briefcase.app.attendance.iOS]
+requires = [
+    "toga-iOS>=0.5.3",
+]
+
+[tool.briefcase.app.attendance.iOS.permissions]
+camera = "Access to scan QR codes"
+
+Briefcase Log:
+[20:52:52]                                                                                                                                                                dev.py:322
+           [attendance] Activating dev environment...                                                                                                                     dev.py:322
+                                                                                                                                                                          dev.py:350
+           [attendance] Starting in dev mode...                                                                                                                           dev.py:350
+                                                                                                                                                                   subprocess.py:839
+           >>> Running Command:                                                                                                                                    subprocess.py:839
+           >>>     /Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin/bin/python -c 'import runpy,                              subprocess.py:839
+           sys;sys.path.pop(0);sys.argv.extend([]);runpy.run_module("attendance", run_name="__main__", alter_sys=True)'                                                             
+           >>> Working Directory:                                                                                                                                  subprocess.py:839
+           >>>     /Users/francisacharya                                                                                                                           subprocess.py:839
+           >>> Environment Overrides:                                                                                                                              subprocess.py:839
+           >>>     PYTHONPATH=/Users/francisacharya/Desktop/attendance/src                                                                                         subprocess.py:839
+           >>>     PYTHONUNBUFFERED=1                                                                                                                              subprocess.py:839
+           >>>     PYTHONDEVMODE=1                                                                                                                                 subprocess.py:839
+           >>>     PYTHONUTF8=1                                                                                                                                    subprocess.py:839
+           >>>                                                                                                                                                     subprocess.py:839
+           PATH=/Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin/bin:/Users/francisacharya/Desktop/attendance/.venv/bin:/User                  
+           s/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Users/francisacharya/.antigravity/antigravity/bin:/Us                  
+           ers/francisacharya/.nvm/versions/node/v10.19.0/bin:/opt/homebrew/opt/php@7.4/sbin:/opt/homebrew/opt/php@7.4/bin:/opt/homebrew/opt/openssl@3/bin:/Librar                  
+           y/Frameworks/Python.framework/Versions/3.14/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sb                  
+           in:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:                  
+           /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Users/francisacharya/.nvm/versions/node/v10.1                  
+           9.0/bin:/opt/homebrew/opt/php@7.4/sbin:/opt/homebrew/opt/php@7.4/bin:/opt/homebrew/opt/openssl@3/bin:/Library/Frameworks/Python.framework/Versions/3.14                  
+           /bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/francisacharya/development/flutter/bin:/Users/francisacharya/.antigravity/extensions/ms-python.debugpy                  
+           -2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts:/bin:/Users/francisacharya/development/flutter/bin                                                               
+           >>>     VIRTUAL_ENV=/Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin                                               subprocess.py:839
+           ===========================================================================                                                                                    run.py:175
+           <string>:31: DeprecationWarning: Pack.padding is deprecated. Use Pack.margin instead.                                                                   subprocess.py:196
+           <string>:36: DeprecationWarning: Pack.alignment is deprecated. Use Pack.align_items instead.                                                            subprocess.py:196
+           /Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin/lib/python3.14/site-packages/travertino/style.py:267:             subprocess.py:196
+           DeprecationWarning: Pack.alignment is deprecated. Use Pack.align_items instead.                                                                                          
+             return getattr(self, name)                                                                                                                            subprocess.py:196
+[20:53:02] Logged in as admin                                                                                                                                      subprocess.py:196
+           <string>:34: DeprecationWarning: Pack.padding_bottom is deprecated. Use Pack.margin_bottom instead.                                                     subprocess.py:196
+           <string>:32: DeprecationWarning: Pack.padding_top is deprecated. Use Pack.margin_top instead.                                                           subprocess.py:196
+[21:02:06] Logged in as admin                                                                                                                                      subprocess.py:196
+[21:02:50] /Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin/lib/python3.14/site-packages/rubicon/objc/api.py:1701:            subprocess.py:196
+           ResourceWarning: unclosed <socket.socket fd=18, family=30, type=1, proto=6, laddr=('::1', 55378, 0, 0)>                                                                  
+             partial.methods.update(superpartial.methods)                                                                                                          subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/selector_events.py:873: ResourceWarning: unclosed transport                   subprocess.py:196
+           <_SelectorSocketTransport fd=18 read=idle write=<idle, bufsize=0>>                                                                                                       
+             _warn(f"unclosed transport {self!r}", ResourceWarning, source=self)                                                                                   subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin/lib/python3.14/site-packages/rubicon/objc/api.py:1701:            subprocess.py:196
+           ResourceWarning: unclosed <socket.socket fd=19, family=30, type=1, proto=6, laddr=('::1', 55380, 0, 0)>                                                                  
+             partial.methods.update(superpartial.methods)                                                                                                          subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/selector_events.py:873: ResourceWarning: unclosed transport                   subprocess.py:196
+           <_SelectorSocketTransport fd=19 read=idle write=<idle, bufsize=0>>                                                                                                       
+             _warn(f"unclosed transport {self!r}", ResourceWarning, source=self)                                                                                   subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin/lib/python3.14/site-packages/rubicon/objc/api.py:1701:            subprocess.py:196
+           ResourceWarning: unclosed <socket.socket fd=22, family=30, type=1, proto=6, laddr=('::1', 55449, 0, 0)>                                                                  
+             partial.methods.update(superpartial.methods)                                                                                                          subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/selector_events.py:873: ResourceWarning: unclosed transport                   subprocess.py:196
+           <_SelectorSocketTransport fd=22 read=idle write=<idle, bufsize=0>>                                                                                                       
+             _warn(f"unclosed transport {self!r}", ResourceWarning, source=self)                                                                                   subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin/lib/python3.14/site-packages/rubicon/objc/api.py:1701:            subprocess.py:196
+           ResourceWarning: unclosed <socket.socket fd=23, family=30, type=1, proto=6, laddr=('::1', 55455, 0, 0)>                                                                  
+             partial.methods.update(superpartial.methods)                                                                                                          subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/selector_events.py:873: ResourceWarning: unclosed transport                   subprocess.py:196
+           <_SelectorSocketTransport fd=23 read=idle write=<idle, bufsize=0>>                                                                                                       
+             _warn(f"unclosed transport {self!r}", ResourceWarning, source=self)                                                                                   subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+[21:03:16] Logged in as teacher                                                                                                                                    subprocess.py:196
+[21:04:07] /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/traceback.py:295: ResourceWarning: unclosed <socket.socket fd=18, family=30, type=1,  subprocess.py:196
+           proto=6, laddr=('::1', 55457, 0, 0)>                                                                                                                                     
+             def __init__(self, filename, lineno, name, *, lookup_line=True,                                                                                       subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/traceback.py:295: ResourceWarning: unclosed <socket.socket fd=19, family=30, type=1,  subprocess.py:196
+           proto=6, laddr=('::1', 55460, 0, 0)>                                                                                                                                     
+             def __init__(self, filename, lineno, name, *, lookup_line=True,                                                                                       subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/traceback.py:295: ResourceWarning: unclosed <socket.socket fd=22, family=30, type=1,  subprocess.py:196
+           proto=6, laddr=('::1', 55462, 0, 0)>                                                                                                                                     
+             def __init__(self, filename, lineno, name, *, lookup_line=True,                                                                                       subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/traceback.py:295: ResourceWarning: unclosed <socket.socket fd=23, family=30, type=1,  subprocess.py:196
+           proto=6, laddr=('::1', 55464, 0, 0)>                                                                                                                                     
+             def __init__(self, filename, lineno, name, *, lookup_line=True,                                                                                       subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/traceback.py:295: ResourceWarning: unclosed <socket.socket fd=24, family=30, type=1,  subprocess.py:196
+           proto=6, laddr=('::1', 55466, 0, 0)>                                                                                                                                     
+             def __init__(self, filename, lineno, name, *, lookup_line=True,                                                                                       subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/selector_events.py:873: ResourceWarning: unclosed transport                   subprocess.py:196
+           <_SelectorSocketTransport fd=24 read=idle write=<idle, bufsize=0>>                                                                                                       
+             _warn(f"unclosed transport {self!r}", ResourceWarning, source=self)                                                                                   subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/traceback.py:295: ResourceWarning: unclosed <socket.socket fd=25, family=30, type=1,  subprocess.py:196
+           proto=6, laddr=('::1', 55469, 0, 0)>                                                                                                                                     
+             def __init__(self, filename, lineno, name, *, lookup_line=True,                                                                                       subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/selector_events.py:873: ResourceWarning: unclosed transport                   subprocess.py:196
+           <_SelectorSocketTransport fd=25 read=idle write=<idle, bufsize=0>>                                                                                                       
+             _warn(f"unclosed transport {self!r}", ResourceWarning, source=self)                                                                                   subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/traceback.py:295: ResourceWarning: unclosed <socket.socket fd=26, family=30, type=1,  subprocess.py:196
+           proto=6, laddr=('::1', 55471, 0, 0)>                                                                                                                                     
+             def __init__(self, filename, lineno, name, *, lookup_line=True,                                                                                       subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/selector_events.py:873: ResourceWarning: unclosed transport                   subprocess.py:196
+           <_SelectorSocketTransport fd=26 read=idle write=<idle, bufsize=0>>                                                                                                       
+             _warn(f"unclosed transport {self!r}", ResourceWarning, source=self)                                                                                   subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+[21:07:16] Logged in as student                                                                                                                                    subprocess.py:196
+[21:07:28] /Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin/lib/python3.14/site-packages/toga/hardware/camera.py:51:          subprocess.py:196
+           UserWarning: Application metadata does not declare that the app will use the camera. See                                                                                 
+           https://toga.beeware.org/en/stable/reference/api/hardware/camera                                                                                                         
+             self._impl = self.factory.Camera(self)                                                                                                                subprocess.py:196
+           /Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin/lib/python3.14/site-packages/rubicon/objc/api.py:307:             subprocess.py:196
+           ResourceWarning: unclosed <socket.socket fd=18, family=30, type=1, proto=6, laddr=('::1', 55488, 0, 0)>                                                                  
+             super().__init__()                                                                                                                                    subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin/lib/python3.14/site-packages/rubicon/objc/api.py:307:             subprocess.py:196
+           ResourceWarning: unclosed <socket.socket fd=19, family=30, type=1, proto=6, laddr=('::1', 55490, 0, 0)>                                                                  
+             super().__init__()                                                                                                                                    subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+           /Users/francisacharya/Desktop/attendance/.briefcase/attendance/dev.cpython-314-darwin/lib/python3.14/site-packages/rubicon/objc/api.py:307:             subprocess.py:196
+           ResourceWarning: unclosed <socket.socket fd=22, family=30, type=1, proto=6, laddr=('::1', 55492, 0, 0)>                                                                  
+             super().__init__()                                                                                                                                    subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+[21:07:30] objc[82783]: class `NSKVONotifying_AVCapturePhotoOutput' not linked into application                                                                    subprocess.py:196
+[21:07:42] <string>:35: DeprecationWarning: Pack.padding_left is deprecated. Use Pack.margin_left instead.                                                         subprocess.py:196
+[21:07:52] /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py:144: ResourceWarning: unclosed <socket.socket fd=19, family=30, type=1,  subprocess.py:196
+           proto=6, laddr=('::1', 55501, 0, 0)>                                                                                                                                     
+             return _CRLock(*args, **kwargs)                                                                                                                       subprocess.py:196
+           ResourceWarning: Enable tracemalloc to get the object allocation traceback                                                                              subprocess.py:196
+[21:08:22] Logged in as admin                                                                                                                                      subprocess.py:196
+[21:26:19] Logged in as admin                                                                                                                                      subprocess.py:196
+[21:29:46]                                                                                                                                                            __main__.py:42
+           Problem running app attendance.                                                                                                                            __main__.py:43
+           Saving log... started                                                                                                                                      console.py:443
+
+Main thread traceback:
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/__main__.py:27 in main                                                                     │
+│                                                                                                                                                                                  │
+│   24 │   │   │   Path.cwd() / "pyproject.toml",                                                                                                                                  │
+│   25 │   │   │   overrides=overrides,                                                                                                                                            │
+│   26 │   │   )                                                                                                                                                                   │
+│ ❱ 27 │   │   command(**options)                                                                                                                                                  │
+│   28 │   except HelpText as e:                                                                                                                                                   │
+│   29 │   │   console.info()                                                                                                                                                      │
+│   30 │   │   console.info(str(e))                                                                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────────────────────────── locals ──────────────────────────────────────────────────────────────────╮                                    │
+│ │       command = <briefcase.platforms.macOS.app.macOSAppDevCommand object at 0x1033f1160>                                                  │                                    │
+│ │       console = <briefcase.console.Console object at 0x1033f0590>                                                                         │                                    │
+│ │             e = BriefcaseCommandError('Problem running app attendance.')                                                                  │                                    │
+│ │ extra_cmdline = []                                                                                                                        │                                    │
+│ │       options = {'appname': None, 'update_requirements': False, 'isolated': True, 'run_app': True, 'test_mode': False, 'passthrough': []} │                                    │
+│ │     overrides = {}                                                                                                                        │                                    │
+│ │        result = 200                                                                                                                       │                                    │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                    │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/commands/dev.py:351 in __call__                                                            │
+│                                                                                                                                                                                  │
+│   348 │   │   │   │   │   )                                                                                                                                                      │
+│   349 │   │   │   │   else:                                                                                                                                                      │
+│   350 │   │   │   │   │   self.console.info("Starting in dev mode...", prefix=app.app_name)                                                                                      │
+│ ❱ 351 │   │   │   │   return self.run_dev_app(                                                                                                                                   │
+│   352 │   │   │   │   │   app,                                                                                                                                                   │
+│   353 │   │   │   │   │   env=self.get_environment(app),                                                                                                                         │
+│   354 │   │   │   │   │   venv=venv,                                                                                                                                             │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────── locals ───────────────────────────────────────────────╮                                                                         │
+│ │                 app = <com.attendance.attendance v0.1.0 AppConfig>                                   │                                                                         │
+│ │             appname = None                                                                           │                                                                         │
+│ │            isolated = True                                                                           │                                                                         │
+│ │             options = {}                                                                             │                                                                         │
+│ │         passthrough = []                                                                             │                                                                         │
+│ │             run_app = True                                                                           │                                                                         │
+│ │                self = <briefcase.platforms.macOS.app.macOSAppDevCommand object at 0x1033f1160>       │                                                                         │
+│ │           test_mode = False                                                                          │                                                                         │
+│ │ update_requirements = False                                                                          │                                                                         │
+│ │                venv = <briefcase.integrations.virtual_environment.VenvContext object at 0x1033f3770> │                                                                         │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                         │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/commands/dev.py:200 in run_dev_app                                                         │
+│                                                                                                                                                                                  │
+│   197 │   │   │   )                                                                                                                                                              │
+│   198 │   │   │                                                                                                                                                                  │
+│   199 │   │   │   # Start streaming logs for the app.                                                                                                                            │
+│ ❱ 200 │   │   │   self._stream_app_logs(                                                                                                                                         │
+│   201 │   │   │   │   app,                                                                                                                                                       │
+│   202 │   │   │   │   popen=app_popen,                                                                                                                                           │
+│   203 │   │   │   │   clean_output=False,                                                                                                                                        │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────────────────────╮ │
+│ │         app = <com.attendance.attendance v0.1.0 AppConfig>                                                                                                                   │ │
+│ │   app_popen = <Popen: returncode: -9 args: ['/Users/francisacharya/Desktop/attendance/.bri...>                                                                               │ │
+│ │     cmdline = ['/Users/francisacharya/Desktop/attendance/.venv/bin/python3.14', '-c', 'import runpy, sys;sys.path.pop(0);sys.argv.extend([]);runpy.run_module("attendan'+41] │ │
+│ │         env = {'PYTHONPATH': '/Users/francisacharya/Desktop/attendance/src', 'PYTHONUNBUFFERED': '1', 'PYTHONDEVMODE': '1', 'PYTHONUTF8': '1'}                               │ │
+│ │     env_key = 'PYTHONUTF8'                                                                                                                                                   │ │
+│ │   env_value = '1'                                                                                                                                                            │ │
+│ │ main_module = 'attendance'                                                                                                                                                   │ │
+│ │     options = {}                                                                                                                                                             │ │
+│ │ passthrough = []                                                                                                                                                             │ │
+│ │        self = <briefcase.platforms.macOS.app.macOSAppDevCommand object at 0x1033f1160>                                                                                       │ │
+│ │        venv = <briefcase.integrations.virtual_environment.VenvContext object at 0x1033f3770>                                                                                 │ │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│                                                                                                                                                                                  │
+│ /Users/francisacharya/Desktop/attendance/.venv/lib/python3.14/site-packages/briefcase/commands/run.py:206 in _stream_app_logs                                                    │
+│                                                                                                                                                                                  │
+│   203 │   │   │   │   # If we're monitoring an actual app (not just a log stream),                                                                                               │
+│   204 │   │   │   │   # and the app didn't exit cleanly, surface the error to the user.                                                                                          │
+│   205 │   │   │   │   if popen.poll() != 0:                                                                                                                                      │
+│ ❱ 206 │   │   │   │   │   raise BriefcaseCommandError(f"Problem running app {app.app_name}.")                                                                                    │
+│   207 │   │                                                                                                                                                                      │
+│   208 │   │   except KeyboardInterrupt:                                                                                                                                          │
+│   209 │   │   │   pass  # Catch CTRL-C to exit normally                                                                                                                          │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────── locals ─────────────────────────────────────────────╮                                                                              │
+│ │          app = <com.attendance.attendance v0.1.0 AppConfig>                                     │                                                                              │
+│ │ clean_filter = None                                                                             │                                                                              │
+│ │ clean_output = False                                                                            │                                                                              │
+│ │   log_filter = <briefcase.commands.run.LogFilter object at 0x1033f3620>                         │                                                                              │
+│ │   log_stream = False                                                                            │                                                                              │
+│ │        popen = <Popen: returncode: -9 args: ['/Users/francisacharya/Desktop/attendance/.bri...> │                                                                              │
+│ │         self = <briefcase.platforms.macOS.app.macOSAppDevCommand object at 0x1033f1160>         │                                                                              │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+BriefcaseCommandError: Problem running app attendance.
